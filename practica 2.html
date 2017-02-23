@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+			<title> Practica 1 UPNA </title>
+		<link href="css/bootstrap.min.css" media="all" rel="stylesheet"/> 
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/application.js"></script>
+		<style>
+			
+			body {
+				background-color:  	#778899;
+			}
+			.container {
+				background-color:  	#D3D3D3;
+				padding-top:25px;
+				padding-bottom:100px;
+			}
+			#pestañas{
+				background-color: #FFFFFF;
+			}
+			#carrito {
+				background-color: #FFFFFF;
+				
+			}
+			#img_prin {
+				background-color:  	#FFFFFF;
+				
+			}
+			#product {
+				display: block;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				height:320px;
+				width: 200px;		
+			}
+			.imp {			
+				width:210px; 
+				height:130px;
+				display: block; 
+				margin:0 auto;								
+			}
+			
+			table {
+				font-family: arial, sans-serif;
+				border-collapse: collapse;
+				width: 100%;
+			}
+
+			td, th {
+				border: 1px solid #dddddd;
+				text-align: left;
+				padding: 8px;
+			}
+
+			tr:nth-child(even) {
+				background-color: #dddddd;
+			}
+			.sep {
+				height: 10px;
+				background-color: #778899;
+				
+			}
+			
+		
+		</style>
+	</head>
+	<body>
+
+		<div class="container">
+		
+			<div id="productos" class="container caratulas col-md-12" id="img_prin" style="background-color:  	#FFFFFF; padding-bottom:50px">
+			
+				<div id="producto_1" data-caratula='1' data-precio='44.95' class="cal col-md-4">
+					<a href='#'><img class="img-thumbnail" id="product"  src="img/producto_1.jpg"></img></a>
+				</div>
+				<div id="producto_2" data-caratula='2' data-precio='49.95' class="cal col-md-4 text-align-center">
+					<a href='#'><img class="img-thumbnail" id="product"  src="img/producto_2.jpg"></img></a>
+				</div>
+				<div id="producto_3" data-caratula='3' data-precio='29.95' class="cal col-md-4">
+					<a href='#'><img class="img-thumbnail" id="product" src="img/producto_3.jpg"></img></a>
+				</div>			
+			</div>
+		
+			<div id="pestañas" style='padding-bottom:50px; 'class="container col-md-12">
+			  <ul class="nav nav-tabs">
+				<li class="pest"><a id='menuimagen' data-toggle="tab" class="active" href="#menu1">Imagen</a></li>
+				<li class="pest"><a data-toggle="tab" href="#menu2">Descripcion</a></li>
+				<li class="pest"><a data-toggle="tab" href="#menu3">Precio</a></li>
+			  </ul>
+
+			  <div class="tab-content">
+				<div id="menu1" class="tab-pane fade">
+					<div id="dimg"> <img id='imagengrande' src='img/rs1.jpg' style='width:320px; height:240px; display: block; margin:0 auto; padding-bottom:25px; padding-top:25px;'> </img></div>
+					<div class=' imgp col-md-12'>
+						
+						<div class='col-md-4'>
+							<img id='i1' class='imp img-thumbnail' src='img/rs1.jpg'></img>
+						</div>
+						<div class='col-md-4'>
+							<img id='i2' class='imp img-thumbnail' src='img/rs2.jpg'></img>
+						</div>
+						<div class='col-md-4'>
+							<img id='i3' class='imp img-thumbnail' src='img/rs3.jpg'></img>
+						</div>
+						
+					</div>
+				</div>
+				<div id="menu2" class="tab-pane fade">
+				  <h3>Menu 2</h3>
+				  <p id='descripcion'></p>
+				</div>
+				<div id="menu3" class="tab-pane fade">
+				  <h3>Precio y compra</h3>
+				  <p class='precio'>Precio unidad: 50$</p>
+				  
+				  <p>Unidades: </p><input class='cantidad' type='number' min='0' value='0'></input>
+				  <button class="btn btn-default" id='metercarrito'type="submit">Meter al carrito</button>
+				</div>
+			  </div>
+			</div>
+			<div class="sep"></div>
+			<div id="carrito" style='padding-bottom:100px;' class="container col-md-12">
+			
+				<h3>Carrito <span class="glyphicon glyphicon-shopping-cart"></span></h3>
+				<div id='table'>
+				
+					<table id='tabla'>
+					
+					<tr id='columnas'>
+					<th>Producto</th>
+					<th>Unidades</th>
+					<th>Precio unitario</th>
+					<th>Total</th>
+					
+					</tr>
+
+					
+					
+					</table>
+					<p class='total' style='text-align:right;'></p>
+				</div>
+			
+			</div>
+		
+		</div>
+	
+	
+	</body>
+
+</html>
